@@ -37,29 +37,3 @@ submit.addEventListener("click",(e)=>{
 })
 
 getWeather("Mumbai")
-
-
-
-
-getWeather2()
-{
-
-    fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather', options)
-	.then(response => response.json())
-	.then(response =>{
-        
-        console.log(response)
-        
-        cloud_pct_boston.innerHTML = response.cloud_pct
-        temp_boston.innerHTML = response.temp
-        feels_like_boston.innerHTML = response.feels_like
-        humidity_boston.innerHTML = response.humidity
-        min_temp_boston.innerHTML = response.min_temp
-        max_temp_boston.innerHTML = response.max_temp
-        wind_speed_boston.innerHTML = response.wind_speed 
-        sunrise_boston.innerHTML = response.sunrise
-        sunset_boston.innerHTML = response.sunset
-    } )
-	.catch(err => console.error(err));
-}
-getWeather2("Bostons")
